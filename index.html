@@ -4,13 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Vue Boolzapp</title>
 </head>
 <body>
-    
-    
+    <!-- Milestone 1
+    Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e dall’interlocutore (bianco)
+    assegnando due classi CSS diverse
+    Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto -->
+    <div class="background">
+        <div class="backgroundTop"></div>
+        <div class="backgroundBottom"></div>
+    </div>
+
+    <div class="container">
+        <div class="containerLeft">
+
+            <div class="titleUserLeft">
+
+                <div class="titleUserLeftLeft">
+                    <img class="myAvatarImg" src="img/avatar_io.jpg" alt="">
+                    <p>Nome Utente</p>
+                </div>
+
+                <div class="titleUserLeftRight">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+
+            </div>
+
+            <div class="notification"></div>
+            <div class="input">
+                <input type="text">
+            </div>
+            <div class="user"></div>
+            <div class="user"></div>
+            <div class="user"></div>
+            <div class="user"></div>
+        </div>
+        <div class="containerRight"></div>
+    </div>
+
 
     <script src="js/script.js"></script>
 </body>

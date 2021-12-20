@@ -6,4 +6,75 @@
 
 html{
     font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* background body */
+.background{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: -99999;
+}
+
+.backgroundTop{
+    background-color: #009587;
+    height: 20vh;
+    width: 100%;
+}
+
+.backgroundBottom{
+    background-color: #DBDBD2;
+    height: 80vh;
+    width: 100%;
+}
+/* /background body */
+
+/* container */
+.container{
+    margin: auto;
+    width: 80%;
+    border: 1px solid black;
+}
+/* /container */
+
+/* containerLeft */
+.containerLeft{
+    width: 30%;
+}
+/* titleUserLeft */
+.titleUserLeft{
+    border: 1px solid black;
+    background-color: #EAEAEA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+}
+
+.titleUserLeft .titleUserLeftLeft{
+    display: flex;
+    align-items: center;
+}
+
+.titleUserLeft .myAvatarImg{
+    width: 4em;
+    border-radius: 50%;
+}
+
+.titleUserLeft .titleUserLeftLeft p{
+    margin-left: 0.2em;
+}
+
+.titleUserLeft .titleUserLeftRight i{
+    margin-left: 0.5em;
+    color: #B1B1B1;
+}
+/* /titleUserLeft */
+
+/* /containerLeft */
+
+/* containerRight */
+.containerRight{
+    width: 70%;
 }
