@@ -35,7 +35,7 @@ html{
     margin: auto;
     width: 90%;
     display: flex;
-    border: 1px solid black;
+    border: 1px solid red;
 }
 /* /container */
 
@@ -206,7 +206,6 @@ html{
     background: url(../img/mine.jpg);
     width: 100%;
     height: 80%;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
 }
@@ -214,7 +213,6 @@ html{
 .chat .containerChat{
     width: 80%;
     margin: 2em auto;
-    border: 1px solid red;
 }
 
 .chat .userChatBox{
