@@ -56,7 +56,7 @@ html{
     align-items: center;
 }
 
-.titleUserLeft .myAvatarImg{
+.titleUserLeft img.myAvatarImg{
     width: 4em;
     border-radius: 50%;
 }
@@ -115,6 +115,42 @@ html{
     width: 80%;
 }
 /* /input */
+
+/* users */
+.user{
+    padding: 1em;
+    background-color: white;
+    border-bottom: 1px solid #FAFAFA;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user .userLeft{
+    display: flex;
+}
+
+.users img.avatarUser{
+    width: 4em;
+    border-radius: 50%;
+}
+
+.users .textUser{
+    padding-top: 0.2em;
+    padding-left: 0.5em;
+}
+
+.users .userMessage{
+    color: #B6B9BB;
+    font-size: 0.7em;
+}
+
+.users .dateMessage{
+    color: #B6B9BB;
+    font-size: 0.6em;
+}
+
+
+/* /users */
 
 /* /containerLeft */
 
