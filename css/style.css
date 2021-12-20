@@ -34,6 +34,7 @@ html{
 .container{
     margin: auto;
     width: 90%;
+    display: flex;
     border: 1px solid black;
 }
 /* /container */
@@ -49,6 +50,7 @@ html{
     justify-content: space-between;
     align-items: center;
     padding: 0.5em;
+    height: 10%;
 }
 
 .titleUserLeft .titleUserLeftLeft{
@@ -117,6 +119,11 @@ html{
 /* /input */
 
 /* users */
+.users{
+    background-color: white;
+    height: 500px;
+}
+
 .user{
     padding: 1em;
     background-color: white;
@@ -148,13 +155,66 @@ html{
     color: #B6B9BB;
     font-size: 0.6em;
 }
-
-
 /* /users */
 
 /* /containerLeft */
+
 
 /* containerRight */
 .containerRight{
     width: 70%;
 }
+
+/* chatTitle */
+.chatTitle{
+    background-color: #EAEAEA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    border-left: 1px solid #D6D6D6;
+    height: 10%;
+}
+
+.chatTitle .chatTitletLeft{
+    display: flex;
+    align-items: center;
+}
+
+.chatTitle img.userChat{
+    width: 4em;
+    border-radius: 50%;
+}
+
+.chatTitle .chatTitletLeft p{
+    margin-left: 1em;
+}
+
+.chatTitle .chatTitletLeft .lastAccessChat{
+    color: #727A7D;
+    font-size: 0.8em;
+}
+
+.chatTitle .chatTitleRight i{
+    margin-left: 0.5em;
+    color: #B1B1B1;
+}
+/* /chatTitle */
+
+/* chat */
+.chat{
+    background: url(../img/mine.jpg);
+    width: 100%;
+    height: 80%;
+}
+/* /chat */
+
+/* footerChat */
+.footerChat{
+    background-color: gray;
+    width: 100%;
+    height: 10%;
+}
+/* /footerChat */
+
+/* /containerRight */
