@@ -33,7 +33,7 @@ html{
 /* container */
 .container{
     margin: auto;
-    width: 80%;
+    width: 90%;
     border: 1px solid black;
 }
 /* /container */
@@ -44,7 +44,6 @@ html{
 }
 /* titleUserLeft */
 .titleUserLeft{
-    border: 1px solid black;
     background-color: #EAEAEA;
     display: flex;
     justify-content: space-between;
@@ -71,6 +70,31 @@ html{
     color: #B1B1B1;
 }
 /* /titleUserLeft */
+
+/* notification */
+.notification{
+    background-color: #8edafc;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.notification .notificationLeft i{
+    font-size: 1.5em;
+    padding: 0.5em;
+    background-color: white;
+    border-radius: 50%;
+    color: #8edafc;
+}
+
+.notification .notificationRight{
+    margin-left: 1em;
+}
+
+.notification .notificationRight a{
+    color: gray;
+}
+/* /notification */
 
 /* /containerLeft */
 
