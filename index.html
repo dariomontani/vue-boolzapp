@@ -27,108 +27,110 @@
     <div id="app">
 
         <div class="container">
-        <div class="containerLeft">
-            
-            <div class="titleUserLeft">
-                <div class="titleUserLeftLeft">
-                    <img class="myAvatarImg" src="img/avatar_io.jpg" alt="">
-                    <p><strong>Nome Utente</strong></p>
+
+            <div class="containerLeft">
+                
+                <div class="titleUserLeft">
+                    <div class="titleUserLeftLeft">
+                        <img class="myAvatarImg" src="img/avatar_io.jpg" alt="">
+                        <p><strong>Nome Utente</strong></p>
+                    </div>
+                    
+                    <div class="titleUserLeftRight">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
                 </div>
                 
-                <div class="titleUserLeftRight">
-                    <i class="fas fa-circle-notch"></i>
-                    <i class="fas fa-comment-alt"></i>
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-            </div>
-            
-            <div class="notification">
-                <div class="notificationLeft">
+                <div class="notification">
+                    <div class="notificationLeft">
                     <i class="fas fa-bell-slash"></i>
-                </div>
-                <div class="notificationRight">
-                    <p><strong>Ricevi notifiche di nuovi messaggi</strong></p>
-                    <p><a href="">Attiva notifiche desktop</a></p>
-                </div>
-            </div>
-            
-            
-            <div class="input">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Cerca o inizia una nuova chat">
-            </div>
-            
-            <div class="users">
-                <div v-for="(contact, index) in contacts" class="user">
-                    <div class="userLeft">
-                        <img class="avatarUser" :src="'img/avatar${contact.avatar}.jpg'" alt="">
-                        <div class="textUser">
-                            <p class="userName"><strong>{{contact.name}}</strong></p>
-                            <p class="userMessage">{{contact.messages[1].date}}</p>
-                        </div>
                     </div>
-                    <div class="userRight">
-                        <p class="dateMessage">{{contact.messages[1].date}}</p>
-                    </div>
-                </div>
-                <!-- <div class="user">
-                    <div class="userLeft">
-                        <img class="avatarUser" src="img/avatar_2.jpg" alt="">
-                        <div class="textUser">
-                            <p class="userName"><strong>Fabio</strong></p>
-                            <p class="userMessage">Mi piacerebbe ma devo andare a...</p>
-                        </div>
-                    </div>
-                    <div class="userRight">
-                        <p class="dateMessage">20/03/2020 16:35:00</p>
-                    </div>
-                </div>
-                <div class="user">
-                    <div class="userLeft">
-                        <img class="avatarUser" src="img/avatar_3.jpg" alt="">
-                        <div class="textUser">
-                            <p class="userName"><strong>Samuele</strong></p>
-                            <p class="userMessage">Ah scusa!...</p>
-                        </div>
-                    </div>
-                    <div class="userRight">
-                        <p class="dateMessage">28/03/2020 16:15:22</p>
-                    </div>
-                </div>
-                <div class="user">
-                    <div class="userLeft">
-                        <img class="avatarUser" src="img/avatar_4.jpg" alt="">
-                        <div class="textUser">
-                            <p class="userName"><strong>Luisa</strong></p>
-                            <p class="userMessage">Si, ma preferirei andare al ci...</p>
-                        </div>
-                    </div>
-                    <div class="userRight">
-                        <p class="dateMessage">10/01/2020 15:50:00</p>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-        <div class="containerRight">
-            <div class="chatTitle">
-                <div class="chatTitletLeft">
-                    <img class="userChat" src="img/avatar_3.jpg" alt="">
-                    <div class="textTitleChat">
-                        <p class="nameUserChat"><strong>Samuele</strong></p>
-                        <p class="lastAccessChat">Ultimo accesso oggi alle 28/03/2020 16:15:22</p>
+                    <div class="notificationRight">
+                        <p><strong>Ricevi notifiche di nuovi messaggi</strong></p>
+                        <p><a href="">Attiva notifiche desktop</a></p>
                     </div>
                 </div>
                 
-                <div class="chatTitleRight">
+                
+                <div class="input">
                     <i class="fas fa-search"></i>
-                    <i class="fas fa-paperclip"></i>
-                    <i class="fas fa-ellipsis-v"></i>
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
+            
+                <div class="users">
+                    <div v-for="(contact, index) in contacts" class="user">
+                        <div class="userLeft">
+                            <img class="avatarUser" :src="`img/avatar${contact.avatar}.jpg`" alt="">
+                            <div class="textUser">
+                                <p class="userName"><strong>{{contact.name}}</strong></p>
+                                <p class="userMessage">{{contact.messages[1].text}}</p>
+                            </div>
+                        </div>
+                        <div class="userRight">
+                            <p class="dateMessage">{{contact.messages[1].date}}</p>
+                        </div>
+                    </div>
+                    <!-- <div class="user">
+                        <div class="userLeft">
+                            <img class="avatarUser" src="img/avatar_2.jpg" alt="">
+                            <div class="textUser">
+                                <p class="userName"><strong>Fabio</strong></p>
+                                <p class="userMessage">Mi piacerebbe ma devo andare a...</p>
+                            </div>
+                        </div>
+                        <div class="userRight">
+                            <p class="dateMessage">20/03/2020 16:35:00</p>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <div class="userLeft">
+                            <img class="avatarUser" src="img/avatar_3.jpg" alt="">
+                            <div class="textUser">
+                                <p class="userName"><strong>Samuele</strong></p>
+                                <p class="userMessage">Ah scusa!...</p>
+                            </div>
+                        </div>
+                        <div class="userRight">
+                            <p class="dateMessage">28/03/2020 16:15:22</p>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <div class="userLeft">
+                            <img class="avatarUser" src="img/avatar_4.jpg" alt="">
+                            <div class="textUser">
+                                <p class="userName"><strong>Luisa</strong></p>
+                                <p class="userMessage">Si, ma preferirei andare al ci...</p>
+                            </div>
+                        </div>
+                        <div class="userRight">
+                            <p class="dateMessage">10/01/2020 15:50:00</p>
+                        </div>
+                    </div> -->
                 </div>
             </div>
-            
-            <div class="chat">
-                <div class="userChatBox">
-                    <p class="messageChat">La Marianna va in campagna</p>
+
+            <div class="containerRight">
+                <div class="chatTitle">
+                    <div class="chatTitletLeft">
+                        <img class="userChat" src="img/avatar_3.jpg" alt="">
+                        <div class="textTitleChat">
+                            <p class="nameUserChat"><strong>Samuele</strong></p>
+                            <p class="lastAccessChat">Ultimo accesso oggi alle 28/03/2020 16:15:22</p>
+                        </div>
+                    </div>
+                    
+                    <div class="chatTitleRight">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                
+                <div class="chat">
+                    <div class="userChatBox">
+                        <p class="messageChat">La Marianna va in campagna</p>
                         <p class="dataChat">28/03/2020 10:10:40</p>
                     </div>
                     <div class="myChatBox">
@@ -140,7 +142,7 @@
                         <p class="dataChat">28/03/2020 16:15:22</p>
                     </div>
                 </div>
-                
+            
                 <div class="footerChat">
                     <i class="far fa-smile"></i>
                     <input type="text" placeholder="Scrivi un messaggio">
@@ -148,9 +150,7 @@
                 </div>
             </div>
         </div>
-        
-
-        <script src="js/script.js"></script>
     </div>
+<script src="js/script.js"></script>
 </body>
 </html>
