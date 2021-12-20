@@ -96,6 +96,26 @@ html{
 }
 /* /notification */
 
+/* input */
+.input{
+    padding: 0.5em;
+    border: 5px solid #FAFAFA;
+    background-color: white;
+}
+
+.input i{
+    color: #B6B9BB;
+    padding-left: 1em;
+    padding-right: 2em;
+}
+
+.input input{
+    border-style: none;
+    outline: none;
+    width: 80%;
+}
+/* /input */
+
 /* /containerLeft */
 
 /* containerRight */
