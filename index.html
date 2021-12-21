@@ -19,7 +19,7 @@
     Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e dall’interlocutore (bianco)
     assegnando due classi CSS diverse
     Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto -->
-    
+
     <!-- Milestone 2
     Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto
     attivo all’interno del pannello della conversazione
@@ -117,10 +117,10 @@
                 <div class="containerRight">
                     <div class="chatTitle">
                         <div class="chatTitletLeft">
-                            <img class="userChat" src="img/avatar_3.jpg" alt="">
+                            <img class="userChat" :src="`img/avatar${contacts[0].avatar}.jpg`" alt="">
                             <div class="textTitleChat">
-                                <p class="nameUserChat"><strong>Samuele</strong></p>
-                                <p class="lastAccessChat">Ultimo accesso oggi alle 28/03/2020 16:15:22</p>
+                                <p class="nameUserChat"><strong>{{contacts[0].name}}</strong></p>
+                                <p class="lastAccessChat">{{contacts[0].messages[0].date}}</p>
                             </div>
                         </div>
                         
@@ -131,19 +131,21 @@
                         </div>
                     </div>
                     
+
+                    <!-- devo inserire i messaggi, se il messaggio ha come status = "sent" gli metto la classe myChatBox altrimenti se status = "received" la classe sarà userChatBox. -->
                     <div class="chat">
-                        <div class="userChatBox">
-                            <p class="messageChat">La Marianna va in campagna</p>
-                            <p class="dataChat">28/03/2020 10:10:40</p>
+                        <div v-for="message in contacts.messages" :class="message.status == 'sent' ? 'myChatBox' : 'userChatBox'">
+                            <p class="messageChat">{{message.text}}</p>
+                            <p class="dataChat">{{message.date}}</p>
                         </div>
-                        <div class="myChatBox">
+                        <!-- <div class="myChatBox">
                             <p class="messageChat">Sicuro di non aver sbagliato chat?</p>
                             <p class="dataChat">28/03/2020 10:20:10</p>
                         </div>
                         <div class="userChatBox">
                             <p class="messageChat">Ah Scusa!</p>
                             <p class="dataChat">28/03/2020 16:15:22</p>
-                        </div>
+                        </div> -->
                     </div>
                 
                     <div class="footerChat">
