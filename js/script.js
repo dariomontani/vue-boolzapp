@@ -92,7 +92,7 @@ const app = new Vue({
     },
 
     methods: {
-        goToChat: function () {
+        goToChat: function (index) {
             this.counter = index;
         }
     }
