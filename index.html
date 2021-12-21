@@ -63,7 +63,7 @@
                     </div>
                 <!-- users -->
                     <div class="users">
-                        <div @click="goToChat" v-for="(contact, index) in contacts" class="user">
+                        <div @click="goToChat(index)" v-for="(contact, index) in contacts" class="user">
                             <div class="userLeft">
                                 <img class="avatarUser" :src="`img/avatar${contact.avatar}.jpg`" alt="">
                                 <div class="textUser">
