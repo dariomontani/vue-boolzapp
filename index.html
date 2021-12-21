@@ -61,9 +61,9 @@
                         <i class="fas fa-search"></i>
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
-                
+                <!-- users -->
                     <div class="users">
-                        <div v-for="(contact, index) in contacts" class="user">
+                        <div @click="goToChat" v-for="(contact, index) in contacts" class="user">
                             <div class="userLeft">
                                 <img class="avatarUser" :src="`img/avatar${contact.avatar}.jpg`" alt="">
                                 <div class="textUser">
@@ -75,45 +75,9 @@
                                 <p class="dateMessage">{{contact.messages[1].date}}</p>
                             </div>
                         </div>
-                        <!-- <div class="user">
-                            <div class="userLeft">
-                                <img class="avatarUser" src="img/avatar_2.jpg" alt="">
-                                <div class="textUser">
-                                    <p class="userName"><strong>Fabio</strong></p>
-                                    <p class="userMessage">Mi piacerebbe ma devo andare a...</p>
-                                </div>
-                            </div>
-                            <div class="userRight">
-                                <p class="dateMessage">20/03/2020 16:35:00</p>
-                            </div>
-                        </div>
-                        <div class="user">
-                            <div class="userLeft">
-                                <img class="avatarUser" src="img/avatar_3.jpg" alt="">
-                                <div class="textUser">
-                                    <p class="userName"><strong>Samuele</strong></p>
-                                    <p class="userMessage">Ah scusa!...</p>
-                                </div>
-                            </div>
-                            <div class="userRight">
-                                <p class="dateMessage">28/03/2020 16:15:22</p>
-                            </div>
-                        </div>
-                        <div class="user">
-                            <div class="userLeft">
-                                <img class="avatarUser" src="img/avatar_4.jpg" alt="">
-                                <div class="textUser">
-                                    <p class="userName"><strong>Luisa</strong></p>
-                                    <p class="userMessage">Si, ma preferirei andare al ci...</p>
-                                </div>
-                            </div>
-                            <div class="userRight">
-                                <p class="dateMessage">10/01/2020 15:50:00</p>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
-
+                <!-- chat title-->
                 <div class="containerRight">
                     <div class="chatTitle">
                         <div class="chatTitletLeft">
@@ -131,6 +95,7 @@
                         </div>
                     </div>
                     
+                    <!-- chat messages -->
 
                     <!-- devo inserire i messaggi, se il messaggio ha come status = "sent" gli metto la classe myChatBox altrimenti se status = "received" la classe sarà userChatBox. -->
                     <div class="chat">
