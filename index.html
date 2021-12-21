@@ -134,7 +134,7 @@
 
                     <!-- devo inserire i messaggi, se il messaggio ha come status = "sent" gli metto la classe myChatBox altrimenti se status = "received" la classe sarà userChatBox. -->
                     <div class="chat">
-                        <div v-for="message in contacts.messages" :class="message.status == 'sent' ? 'myChatBox' : 'userChatBox'">
+                        <div v-for="message in contacts[0].messages" :class="message.status == 'sent' ? 'myChatBox' : 'userChatBox'">
                             <p class="messageChat">{{message.text}}</p>
                             <p class="dataChat">{{message.date}}</p>
                         </div>
