@@ -81,10 +81,10 @@
                 <div class="containerRight">
                     <div class="chatTitle">
                         <div class="chatTitletLeft">
-                            <img class="userChat" :src="`img/avatar${contacts[0].avatar}.jpg`" alt="">
+                            <img class="userChat" :src="`img/avatar${contacts[counter].avatar}.jpg`" alt="">
                             <div class="textTitleChat">
-                                <p class="nameUserChat"><strong>{{contacts[0].name}}</strong></p>
-                                <p class="lastAccessChat">{{contacts[0].messages[0].date}}</p>
+                                <p class="nameUserChat"><strong>{{contacts[counter].name}}</strong></p>
+                                <p class="lastAccessChat">{{contacts[counter].messages[counter].date}}</p>
                             </div>
                         </div>
                         
@@ -99,7 +99,7 @@
 
                     <!-- devo inserire i messaggi, se il messaggio ha come status = "sent" gli metto la classe myChatBox altrimenti se status = "received" la classe sarà userChatBox. -->
                     <div class="chat">
-                        <div v-for="message in contacts[0].messages" :class="message.status == 'sent' ? 'myChatBox' : 'userChatBox'">
+                        <div v-for="message in contacts[counter].messages" :class="message.status == 'sent' ? 'myChatBox' : 'userChatBox'">
                             <p class="messageChat">{{message.text}}</p>
                             <p class="dataChat">{{message.date}}</p>
                         </div>
@@ -118,6 +118,7 @@
                         <input type="text" placeholder="Scrivi un messaggio">
                         <i class="fas fa-microphone"></i>
                     </div>
+
                 </div>
             </div>
         </div>

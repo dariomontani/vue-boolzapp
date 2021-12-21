@@ -92,6 +92,8 @@ const app = new Vue({
     },
 
     methods: {
-        
+        goToChat: function () {
+            this.counter = index;
+        }
     }
 })
