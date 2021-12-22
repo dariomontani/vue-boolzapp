@@ -2,6 +2,7 @@ const app = new Vue({
     el: '#app',
     data: {
         counter: 0,
+        newMessage: "",
 
         contacts: [
             {
@@ -94,6 +95,24 @@ const app = new Vue({
     methods: {
         goToChat: function (index) {
             this.counter = index;
+        },
+
+        addMessage: function () {
+            if (this.newMessage.length != 0) {
+
+                let obj = {
+                    date: "22/12/2021 12:00:00",
+                    text: this.newMessage,
+                    status: "sent"
+                }
+
+                this.contacts[this.counter].messages.push(obj);
+                this.newMessage = '';
+            } else {
+            }
         }
+    },
+
+    create(){
     }
 })
