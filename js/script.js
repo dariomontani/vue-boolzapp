@@ -96,20 +96,34 @@ const app = new Vue({
         goToChat: function (index) {
             this.counter = index;
         },
-
+        // aggiungo un messaggio se l'utente inserisce qualcosa 
         addMessage: function () {
             if (this.newMessage.length != 0) {
 
-                let obj = {
+                let myObj = {
                     date: "22/12/2021 12:00:00",
                     text: this.newMessage,
                     status: "sent"
                 }
 
-                this.contacts[this.counter].messages.push(obj);
+                this.contacts[this.counter].messages.push(myObj);
+                // svuoto l'input type='text'
                 this.newMessage = '';
+
             } else {
             }
+            // dopo un secondo ricevo un messaggio "ok"
+            setTimeout(() => {
+                let obj = {
+                    date: "22/12/2021 12:00:01",
+                    text: "ok",
+                    status: "received"
+                }
+
+                this.contacts[this.counter].messages.push(obj);
+
+            }, 1000);
+
         }
     },
 
