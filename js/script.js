@@ -3,6 +3,7 @@ const app = new Vue({
     data: {
         counter: 0,
         newMessage: "",
+        textSearch:"",
 
         contacts: [
             {
@@ -91,25 +92,27 @@ const app = new Vue({
             },
         ],
     },
-
+    
     methods: {
         goToChat: function (index) {
             this.counter = index;
         },
+        
+        
         // aggiungo un messaggio se l'utente inserisce qualcosa 
         addMessage: function () {
             if (this.newMessage.length != 0) {
-
+                
                 let myObj = {
                     date: "22/12/2021 12:00:00",
                     text: this.newMessage,
                     status: "sent"
                 }
-
+                
                 this.contacts[this.counter].messages.push(myObj);
                 // svuoto l'input type='text'
                 this.newMessage = '';
-
+                
             } else {
             }
             // dopo un secondo ricevo un messaggio "ok"
@@ -119,14 +122,24 @@ const app = new Vue({
                     text: "ok",
                     status: "received"
                 }
-
+                
                 this.contacts[this.counter].messages.push(obj);
-
+                
             }, 1000);
-
+            
+        },
+        
+        searchName: function (){
+            this.contacts.forEach((contact) => {
+                if (contact.name.toLowerCase().includes(this.textSearch.toLowerCase())) {
+                    contact.visible = true;
+                } else {
+                    contact.visible = false;
+                }
+            });
         }
     },
-
+    
     create(){
     }
 })
