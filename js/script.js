@@ -4,7 +4,7 @@ const app = new Vue({
         counter: 0,
         newMessage: "",
         textSearch:"",
-
+        
         contacts: [
             {
                 name: "Michele",
@@ -130,14 +130,15 @@ const app = new Vue({
         },
         
         searchName: function (){
-            this.contacts.forEach((contact) => {
-                if (contact.name.toLowerCase().includes(this.textSearch.toLowerCase())) {
-                    contact.visible = true;
+            let text = this.textSearch.toLowerCase();
+            this.contacts.forEach(element => {
+                if (element.name.toLowerCase().includes(text)) {
+                    element.visible = true;
                 } else {
-                    contact.visible = false;
+                    element.visible = false;
                 }
             });
-        }
+        },
     },
     
     create(){
