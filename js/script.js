@@ -4,6 +4,10 @@ const app = new Vue({
         counter: 0,
         newMessage: "",
         textSearch:"",
+        messageActive: {
+            show: false,
+            index: null,
+        },
         
         contacts: [
             {
@@ -139,6 +143,17 @@ const app = new Vue({
                 }
             });
         },
+
+        showMenu: function(index){
+            if (this.messageActive.show && this.messageActive.index === index) {
+                this.messageActive.show = false;
+                this.messageActive.index = null;
+
+            } else {
+                this.messageActive.index = index;
+                this.messageActive.show = true;
+            }
+        }
     },
     
     create(){
