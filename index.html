@@ -130,8 +130,12 @@
                             <p class="dataChat">{{message.date}}</p>
 
                             <div v-if="messageActive.show && index === messageActive.index" class="messageOption">
-                                <p>Info messaggio</p>
-                                <p>Cancella messagio</p>
+                                <div>
+                                    <p>Info messaggio</p>
+                                </div>
+                                <div @click="deleteMessage(index)">
+                                    <p>Cancella messagio</p>
+                                </div>
                             </div>
                         </div>
                     </div>
