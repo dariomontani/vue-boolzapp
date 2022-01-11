@@ -81,7 +81,6 @@
                         </div>
                     </div>
                     
-                    
                     <div class="input">
                         <i class="fas fa-search"></i>
                         <input v-model="textSearch" @keyup="searchName" type="text" placeholder="Cerca o inizia una nuova chat">
@@ -125,7 +124,7 @@
 
                     <!-- devo inserire i messaggi, se il messaggio ha come status = "sent" gli metto la classe myChatBox altrimenti se status = "received" la classe sarà userChatBox. -->
                     <div class="chat">
-                        <div v-for="message in contacts[counter].messages" :class="message.status == 'sent' ? 'myChatBox' : 'userChatBox'">
+                        <div v-for="(message, index) in contacts[counter].messages" :class="message.status == 'sent' ? 'myChatBox' : 'userChatBox'">
                             <p class="messageChat">{{message.text}}</p>
                             <i @click="showMenu(index)" class="fa fa-chevron-down"></i>
                             <p class="dataChat">{{message.date}}</p>

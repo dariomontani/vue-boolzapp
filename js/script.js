@@ -145,6 +145,7 @@ const app = new Vue({
         },
 
         showMenu: function(index){
+            console.log(index);
             if (this.messageActive.show && this.messageActive.index === index) {
                 this.messageActive.show = false;
                 this.messageActive.index = null;
